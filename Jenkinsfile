@@ -50,6 +50,7 @@ pipeline{
                     docker_image.push("${IMAGE_TAG}")
                 }
                 }
+                /* hiuhu */
             }
         }
     }
