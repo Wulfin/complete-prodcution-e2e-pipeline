@@ -18,5 +18,17 @@ pipeline{
                 git branch: 'main', credentialsId: 'github', url: 'https://github.com/Wulfin/complete-prodcution-e2e-pipeline'
             }
         }
+
+        stage("Build app"){
+            steps{
+                sh "mvn clean package"
+            }
+        }
+
+        stage("Test app"){
+            steps{
+                sh "mvn test"
+            }
+        }
     }
 }
